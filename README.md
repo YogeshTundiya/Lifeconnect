@@ -68,3 +68,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+If error comes after npm start do this 
+`npm uninstall react react-dom` 
+
+then do this 
+`npm install react@19.0.0 react-dom@19.0.0`
+
+Install required dependencies with the --legacy-peer-deps flag
+`npm install --legacy-peer-deps @testing-library/jest-dom@^5.14.1 @testing-library/react@^13.0.0 @testing-library/user-event@^13.2.1 web-vitals@^2.1.0`
