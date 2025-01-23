@@ -1,0 +1,14 @@
+.head {
+    height: 35px;
+    background-color: #131313;
+    color: #f3eeee;
+    display: flex;
+    padding-left: 45px;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+}
+
+.logo_time .logo {
+    font-size: 30px;
+}
