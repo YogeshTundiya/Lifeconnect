@@ -1,7 +1,13 @@
+:root {
+    --white: #f3eeee;
+    --green: #198558;
+    --orenge: #f35e27;
+}
+
 .head {
     height: 35px;
     background-color: #131313;
-    color: #f3eeee;
+    color: var(--white);
     display: flex;
     padding-left: 45px;
     align-items: center;
@@ -9,6 +15,59 @@
     font-size: 12px;
 }
 
+.head p {
+    padding-left: 6px;
+}
+
+.so_icon {
+    display: flex;
+    justify-content: flex-end;
+    transform: translateY(-28px);
+    margin-right: 80px;
+}
+
+.so_icon a {
+    text-decoration: none;
+    color: var(--white);
+    padding-right: 8px;
+}
+
+.logo_time {
+    display: flex;
+    height: 90px;
+    /* background-color: aquamarine; */
+    justify-content: space-between;
+    margin-right: 30px;
+    margin-left: 30px;
+    /* margin-bottom: 30px; */
+    transform: translateY(-21px);
+}
+
 .logo_time .logo {
     font-size: 30px;
+    font-weight: 500;
+}
+
+.logo_time .time p {
+    color: var(--green);
+    font-weight: 500;
+}
+
+.logo_time .time .btn {
+    padding: 6px;
+    border: none;
+    background-color: var(--orenge);
+    border-radius: 3px;
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+/* navbar design */
+.navbar {
+    height: 10px;
+    background-color: #131313;
+
 }

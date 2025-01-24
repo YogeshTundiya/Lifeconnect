@@ -1,7 +1,12 @@
 import React from "react";
 import "./css/Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebook,
+  faInstagram,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Header = () => {
   return (
@@ -10,18 +15,30 @@ const Header = () => {
         <div className="head">
           <FontAwesomeIcon icon={faLocationDot} />
           <p>Blood and Organ Donation Network</p>
-          <div>
-            <a href="#"></a>
-            <a href="#"></a>
-          </div>
+        </div>
+        <div className="so_icon">
+          <a href="#">
+            <FontAwesomeIcon icon={faFacebook} style={{ color: "#ffff" }} />
+          </a>
+          <a href="#">
+            <FontAwesomeIcon icon={faTwitter} style={{ color: "#ffff" }} />
+          </a>
+          <a href="#">
+            <FontAwesomeIcon icon={faInstagram} style={{ color: "#ffff" }} />
+          </a>
         </div>
         <div className="logo_time">
           <p className="logo">LifeConnect</p>
           <div className="time">
             <p>Available Daily from 7am to 10pm</p>
-            <button>contact us</button>
+            <button className="btn" as={/} link={/}>
+              contact us
+            </button>
           </div>
         </div>
+      </section>
+      <section>
+        <div className="navbar"></div>
       </section>
     </>
   );
