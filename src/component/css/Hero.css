@@ -1,0 +1,61 @@
+:root {
+    --white: #f3eeee;
+    --green: #008779;
+    --orenge: #f35e27;
+    --black: #181818e3;
+    --maroon: #6e0000;
+}
+
+.img {
+    height: 600px;
+    width: 100%;
+    background:
+        radial-gradient(rgba(255, 255, 255, 0.253), rgba(0, 0, 0, 0.37)),
+        /* Gradient Overlay */
+        url("../Imeges/file-20190820-170918-14wwv6w.jpg");
+    opacity: 1;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-color: radial-gradient(#ffffff, #000000); */
+    /* /* background: radial-gradient(#ffffff, #000000); */
+}
+
+.hero {
+    color: var(--white);
+    /* margin: auto 10px; */
+    margin: auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* font-size: 20px; */
+    background: #ffffff94;
+    border-radius: 7px;
+    padding: 13px;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero h1 {
+    color: var(--maroon);
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: "Montserrat", serif;
+    text-shadow: 4px 2px 2px #ffffffd1;
+
+}
+
+.hero .btn {
+    padding: 8px;
+    border: none;
+    background-color: var(--orenge);
+    border-radius: 3px;
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+}

@@ -1,7 +1,9 @@
 :root {
     --white: #f3eeee;
-    --green: #198558;
+    --green: #008779;
     --orenge: #f35e27;
+    --black: #181818e3;
+    --maroon: #6e0000;
 }
 
 .head {
@@ -46,10 +48,11 @@
 .logo_time .logo {
     font-size: 30px;
     font-weight: 500;
+    color: var(--maroon);
 }
 
 .logo_time .time p {
-    color: var(--green);
+    color: var(--maroon);
     font-weight: 500;
 }
 
@@ -68,6 +71,6 @@
 /* navbar design */
 .navbar {
     height: 10px;
-    background-color: #131313;
+    background-color: var(--maroon);
 
 }

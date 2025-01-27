@@ -1,8 +1,25 @@
 import React from "react";
+// import Img from "./Imeges/doct2.jpg";
 import "./css/Hero.css";
 
 const Hero = () => {
-  return <div>This is hero section</div>;
+  return (
+    <>
+      <section>
+        <div className="img">
+          <div className="hero">
+            <h1>
+              Join the Global <br />
+              Network of Life-Savers
+            </h1>
+            <button className="btn" as={/} link={/}>
+              Become a Donor
+            </button>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 };
 
 export default Hero;
