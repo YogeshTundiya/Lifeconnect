@@ -9,6 +9,10 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Header = () => {
+  const handleNavigation = (path) => {
+    window.location.href = path; // This will redirect to the provided path
+  };
+
   return (
     <>
       <section>
@@ -31,23 +35,41 @@ const Header = () => {
           <p className="logo">LifeConnect</p>
           <div className="time">
             <p>Available Daily from 7am to 10pm</p>
-            <button className="btn" as={/} link={/}>
-              contact us
-            </button>
+            <button className="btn">Contact Us</button>
           </div>
         </div>
       </section>
+
+      {/* Navbar Section */}
       <section>
         <div className="navbar">
           <ul>
             <li className="nav_item">
-              <a to={"/"}>Home</a>
+              <a
+                href="#"
+                onClick={() => handleNavigation("/")}
+                style={{ cursor: "pointer" }}
+              >
+                Home
+              </a>
             </li>
             <li className="nav_item">
-              <a href="">Get Involved</a>
+              <a
+                href="#"
+                onClick={() => handleNavigation("/get-involved")}
+                style={{ cursor: "pointer" }}
+              >
+                Get Involved
+              </a>
             </li>
             <li className="nav_item">
-              <a href="">About Us</a>
+              <a
+                href="#"
+                onClick={() => handleNavigation("/about-us")}
+                style={{ cursor: "pointer" }}
+              >
+                About Us
+              </a>
             </li>
           </ul>
         </div>

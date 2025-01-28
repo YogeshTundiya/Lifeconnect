@@ -36,13 +36,13 @@
 
 .logo_time {
     display: flex;
-    height: 90px;
+    height: 80px;
     /* background-color: aquamarine; */
     justify-content: space-between;
     margin-right: 30px;
     margin-left: 30px;
     /* margin-bottom: 30px; */
-    transform: translateY(-21px);
+    transform: translateY(-13px);
 }
 
 .logo_time .logo {
@@ -71,7 +71,7 @@
 
 /* navbar design */
 .navbar {
-    height: 10px;
+    height: 95px;
     background-color: var(--maroon);
 
 }
