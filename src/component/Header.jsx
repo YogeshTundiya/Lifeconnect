@@ -1,5 +1,6 @@
 import React from "react";
 import "./css/Header.css";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -7,7 +8,6 @@ import {
   faInstagram,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-
 const Header = () => {
   return (
     <>
@@ -41,13 +41,9 @@ const Header = () => {
         <div className="navbar">
           <ul>
             <li className="nav_item">
-              <a to={"/"}>Home</a>
-            </li>
-            <li className="nav_item">
-              <a href="">Get Involved</a>
-            </li>
-            <li className="nav_item">
-              <a href="">About Us</a>
+              <Link to={"/"}>Home</Link>
+              <Link to={"/contact"}>Get Involved</Link>
+              <Link to={"/"}>About Us</Link>
             </li>
           </ul>
         </div>

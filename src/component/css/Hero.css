@@ -25,7 +25,7 @@
 .hero {
     color: var(--white);
     /* margin: auto 10px; */
-    margin: auto 24px;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,7 +33,7 @@
     /* font-size: 20px; */
     background: #ffffff94;
     border-radius: 7px;
-    padding: 13px;
+    padding: 14px;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
@@ -48,7 +48,7 @@
     font-family: "Roboto Slab", serif;
     font-optical-sizing: auto;
     text-shadow: 4px 2px 2px #ffffffd1;
-
+    margin: 3px;
 }
 
 .hero .btn {
@@ -61,5 +61,15 @@
     font-weight: 600;
     letter-spacing: 1px;
     cursor: pointer;
-    margin-right: 32rem;
+    /* margin-right: 32rem; */
+}
+
+@media only screen and (max-width:425px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero .btn {
+        font-size: 11px;
+    }
 }
