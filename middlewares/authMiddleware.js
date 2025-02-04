@@ -19,7 +19,7 @@ module.exports = async (req, res, next) => {
     return res.status(401).send({
       success: false,
       error,
-      message: "Authentication Failed🥲",
+      message: "Authentication Failed",
     });
   }
 };
