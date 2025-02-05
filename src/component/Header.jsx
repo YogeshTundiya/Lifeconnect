@@ -38,7 +38,7 @@ const Header = () => {
         </div>
       </section>
       <section>
-        <div className="navbar">
+        <div className="H_nav">
           <ul>
             <li className="nav_item">
               <Link to={"/"}>Home</Link>

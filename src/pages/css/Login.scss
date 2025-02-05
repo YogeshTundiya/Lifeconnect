@@ -1,18 +1,19 @@
 .l_row {
   display: flex;
   justify-content: space-between;
-}
-.l_row .login {
-  display: flex;
-  align-items: center;
-  margin: auto;
-}
-.l_row .login Form {
-  font-family: "Vollkorn", serif;
+  & .login {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    & Form {
+      font-family: "Vollkorn", serif;
+    }
+  }
 }
 
 .form-banner {
   /* max-height: 100%; */
+  // height: 500px;
   width: 64%;
   /* background-color: aqua; */
   background: url(../Imeges/doct2.jpg);
@@ -26,4 +27,4 @@
     width: 0;
     background-size: cover;
     background-image: url(../Imeges/doct.jpg);
-} *//*# sourceMappingURL=Login.css.map */
+} */

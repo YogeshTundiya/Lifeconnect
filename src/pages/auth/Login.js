@@ -1,15 +1,19 @@
 import React from "react";
 import "../css/Login.css";
+import InputType from "../../component/shared/Form/InputType";
+import Form from "../../component/shared/Form/Form";
+import Forml from "../../component/shared/Form/Form";
 const Login = () => {
   return (
     <>
-      <div className="row">
-        <div className="img2"></div>
+      <div className="l_row">
+        <div className="col-md-8 form-banner"></div>
         <div className="login">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla,
-          reiciendis culpa esse animi quibusdam quisquam praesentium numquam sit
-          pariatur, nisi magni saepe ipsum laborum vel iure? Vitae quia quaerat
-          illum!
+          <Forml
+            formTitle={"Login Page"}
+            submitBtn={"Login"}
+            formType={"login"}
+          />
         </div>
       </div>
     </>
