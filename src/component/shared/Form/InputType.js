@@ -14,7 +14,7 @@ const InputType = ({
     <>
       <Form>
         <Form.Group
-          className="mb-3"
+          className="mb-1"
           htmlFor={labelFor}
           controlId="formBasicEmail"
         >
