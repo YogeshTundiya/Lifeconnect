@@ -7,17 +7,42 @@ import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import { ToastContainer } from "react-toastify";
+import ProtectedRoute from "./component/Routes/ProtectedRoute";
+import PublicRoute from "./component/Routes/PublicRoute";
 function App() {
   return (
     <>
       <Provider store={store}>
         <Router>
           <Header />
+          <ToastContainer />
           <Routes>
             <Route path="/" element={<Hero />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
+            <Route
+              path="/contact"
+              element={
+                <ProtectedRoute>
+                  <Contact />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/login"
+              element={
+                <PublicRoute>
+                  <Login />
+                </PublicRoute>
+              }
+            />
+            <Route
+              path="/register"
+              element={
+                <PublicRoute>
+                  <Register />
+                </PublicRoute>
+              }
+            />
           </Routes>
         </Router>
       </Provider>
