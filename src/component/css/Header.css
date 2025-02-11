@@ -126,3 +126,24 @@
         margin: 0 20px;
     }
 }
+
+/* Header-dashboard css */
+.navbar {
+    height: 58px;
+    /* border-top-color: var(--white);
+    background-color: var(--maroon) !important; */
+    color: var(--white) !important;
+}
+
+.nav-link {
+    color: var(--black) !important;
+}
+
+.nav-item .btn {
+    background-color: #f76e6e99;
+    color: #7d0000;
+    border: 1px solid #610000c2;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 5px 15px 5px 15px;
+}

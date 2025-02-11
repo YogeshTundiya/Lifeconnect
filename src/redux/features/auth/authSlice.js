@@ -63,15 +63,15 @@
 // export default authSlice.reducer;
 import { createSlice } from "@reduxjs/toolkit";
 import { getCurrentUser, userLogin, userRegister } from "./authActions";
-import { faL } from "@fortawesome/free-solid-svg-icons";
 
 const token = localStorage.getItem("token")
   ? localStorage.getItem("token")
   : null;
+const user = localStorage.getItem("user") ? localStorage.getItem("user") : null;
 
 const initialState = {
   loading: false,
-  user: null,
+  user,
   token,
   error: null,
 };

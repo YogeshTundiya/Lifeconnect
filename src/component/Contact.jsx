@@ -1,10 +1,15 @@
 import React from "react";
+import Layout from "./shared/Layout.js/Layout";
+import Spinner from "./shared/Spinner";
+import { useSelector } from "react-redux";
 
 function Contact() {
+  const { error, loading } = useSelector((state) => state.auth);
   return (
-    <>
-      <div>this is contect us page</div>
-    </>
+    <Layout>
+      {error && <span>{alert(error)}</span>}
+      {loading ? <Spinner /> : <h1>Dashboard</h1>}
+    </Layout>
   );
 }
 

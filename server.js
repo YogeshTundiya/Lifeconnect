@@ -31,6 +31,7 @@ app.use("/api/v1/inventory", require("./routes/inventoryRoutes"));
 
 // to see sever is proper running
 // http://localhost:8080/
+// http://localhost:3000/
 //add port
 const PORT = process.env.PORT || 8080;
 

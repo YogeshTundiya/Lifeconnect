@@ -10,6 +10,7 @@ export const userLogin = createAsyncThunk(
       //   store token
       if (data.success) {
         localStorage.setItem("token", data.token);
+        // localStorage.setItem("user", data.user);
         toast.success(data.message);
         window.location.replace("/contact");
       }
@@ -75,9 +76,9 @@ export const getCurrentUser = createAsyncThunk(
   async ({ rejectWithValue }) => {
     try {
       const res = await API.get("auth/current-user");
-      if (res?.data) {
+      if (res.data) {
         //if not work remove ?
-        return res?.data;
+        return res.data;
       }
     } catch (error) {
       console.log(error);

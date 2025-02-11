@@ -89,7 +89,7 @@ const currentuserConroller = async (req, res) => {
   try {
     const user = await userModel.findOne({ _id: req.body.userId });
     return res.status(200).send({
-      success: false,
+      success: true,
       message: "User Fetched succesfully🎉",
       user,
     });

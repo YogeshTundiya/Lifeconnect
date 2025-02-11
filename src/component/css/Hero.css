@@ -2,6 +2,7 @@
     --white: #f3eeee;
     --green: #008779;
     --orenge: #f35e27;
+    --orenge1: #cc4e20;
     --black: #181818e3;
     --maroon: #6e0000;
 }
@@ -62,6 +63,11 @@
     letter-spacing: 1px;
     cursor: pointer;
     /* margin-right: 32rem; */
+}
+
+.hero .btn:hover {
+    background-color: var(--orenge1);
+    color: var(--white);
 }
 
 .loader-container {

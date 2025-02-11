@@ -227,7 +227,7 @@ const Forml = ({ formType, submitBtn, formTitle }) => {
           ) : (
             <p>
               Already a user then
-              <Link to="/login"> Login</Link>
+              <Link to="/login">Login</Link>
             </p>
           )}
           <div className="L_R_btn">
