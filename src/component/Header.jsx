@@ -27,27 +27,25 @@ const Header = () => {
             <FontAwesomeIcon icon={faInstagram} style={{ color: "#ffff" }} />
           </a>
         </div>
-        <div className="logo_time">
-          <p className="logo">LifeConnect</p>
-          <div className="time">
+      </section>
+      <div className="H_nav">
+        <ul>
+          <li className="nav_item">
+            <Link to={"/"}>Home</Link>
+            <Link to={"/contact"}>Get Involved</Link>
+            <Link to={"/"}>About Us</Link>
+          </li>
+        </ul>
+      </div>
+      <div className="logo_time">
+        <p className="logo">LifeConnect</p>
+        {/* <div className="time">
             <p>Available Daily from 7am to 10pm</p>
             <button className="btn" as={/} link={/}>
               contact us
             </button>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className="H_nav">
-          <ul>
-            <li className="nav_item">
-              <Link to={"/"}>Home</Link>
-              <Link to={"/contact"}>Get Involved</Link>
-              <Link to={"/"}>About Us</Link>
-            </li>
-          </ul>
-        </div>
-      </section>
+          </div> */}
+      </div>
     </>
   );
 };

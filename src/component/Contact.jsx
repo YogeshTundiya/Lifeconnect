@@ -8,7 +8,14 @@ function Contact() {
   return (
     <Layout>
       {error && <span>{alert(error)}</span>}
-      {loading ? <Spinner /> : <h1>Dashboard</h1>}
+      {loading ? (
+        <Spinner />
+      ) : (
+        <h5 className="ms-4">
+          <i className="fa-solid fa-plus py-4"></i>
+          Add Inventory
+        </h5>
+      )}
     </Layout>
   );
 }
