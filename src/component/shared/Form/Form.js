@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import InputType from "./InputType";
 import Form from "react-bootstrap/Form";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { handleLogin, handleRegister } from "../../../services/authService";
 
@@ -14,6 +15,7 @@ const Forml = ({ formType, submitBtn, formTitle }) => {
   const [website, setwebsite] = useState("");
   const [address, setAddress] = useState("");
   const [phone, setPhone] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   return (
     <>
       <Form
@@ -106,14 +108,33 @@ const Forml = ({ formType, submitBtn, formTitle }) => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
-                  <InputType
-                    labelText={"Password :"}
-                    labelFor={"forEmail"}
-                    inputType={"password"}
-                    placeholder={"Enter password"}
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                  />
+                  <div style={{ position: "relative" }}>
+                    <InputType
+                      labelText="Password :"
+                      labelFor="forPassword"
+                      inputType={showPassword ? "text" : "password"}
+                      placeholder="Enter password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <span
+                      onClick={() => setShowPassword(!showPassword)}
+                      style={{
+                        position: "absolute",
+                        right: "15px",
+                        top: "50%",
+                        transform: "translateY(-50%)",
+                        cursor: "pointer",
+                        marginTop: "15px",
+                      }}
+                    >
+                      {showPassword ? (
+                        <FaRegEyeSlash size={20} />
+                      ) : (
+                        <FaRegEye size={20} />
+                      )}
+                    </span>
+                  </div>
                 </>
               );
             }
@@ -178,14 +199,33 @@ const Forml = ({ formType, submitBtn, formTitle }) => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
-                  <InputType
-                    labelText={"Password :"}
-                    labelFor={"forEmail"}
-                    inputType={"password"}
-                    placeholder={"Enter password"}
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                  />
+                  <div style={{ position: "relative" }}>
+                    <InputType
+                      labelText="Password :"
+                      labelFor="forPassword"
+                      inputType={showPassword ? "text" : "password"}
+                      placeholder="Enter password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <span
+                      onClick={() => setShowPassword(!showPassword)}
+                      style={{
+                        position: "absolute",
+                        right: "15px",
+                        top: "50%",
+                        transform: "translateY(-50%)",
+                        cursor: "pointer",
+                        marginTop: "15px",
+                      }}
+                    >
+                      {showPassword ? (
+                        <FaRegEyeSlash size={20} />
+                      ) : (
+                        <FaRegEye size={20} />
+                      )}
+                    </span>
+                  </div>
                   <InputType
                     labelText={"Website :"}
                     labelFor={"forWebsite"}

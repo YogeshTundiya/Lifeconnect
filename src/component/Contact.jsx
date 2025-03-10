@@ -3,7 +3,7 @@ import Layout from "./shared/Layout.js/Layout";
 import Spinner from "./shared/Spinner";
 import { useSelector } from "react-redux";
 import { Button, Modal } from "react-bootstrap";
-// import Model from "react-bootstrap/Modal";
+// import Model from "react-bootstrap/Modasl";
 // import Model from "./shared/modal/Model";
 
 function Contact() {
