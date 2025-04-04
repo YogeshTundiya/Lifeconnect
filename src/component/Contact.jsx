@@ -2,49 +2,133 @@ import React, { useState } from "react";
 import Layout from "./shared/Layout.js/Layout";
 import Spinner from "./shared/Spinner";
 import { useSelector } from "react-redux";
-import { Button, Modal } from "react-bootstrap";
-// import Model from "react-bootstrap/Modasl";
-// import Model from "./shared/modal/Model";
+import { Button, Modal, Form } from "react-bootstrap";
 
 function Contact() {
   const { error, loading } = useSelector((state) => state.auth);
   const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const [donationType, setDonationType] = useState("blood");
+
+  const toggleModal = () => setShow((prev) => !prev);
+
   return (
     <Layout>
-      {error && <span>{alert(error)}</span>}
+      {error && <div className="alert alert-danger">{error}</div>}
       {loading ? (
         <Spinner />
       ) : (
         <>
           <h5
-            className="ms-4"
-            variant="primary"
-            onClick={handleShow}
+            className="ms-4 text-primary"
+            onClick={toggleModal}
             style={{ cursor: "pointer" }}
           >
-            <i className="fa-solid fa-plus py-4"></i>
-            Add Inventory
+            <i className="fa-solid fa-plus py-4"></i> Add Inventory
           </h5>
+
           <Modal
             show={show}
-            setShow={setShow}
-            onHide={handleClose}
+            onHide={toggleModal}
             backdrop="static"
             keyboard={false}
           >
             <Modal.Header closeButton>
-              <Modal.Title>Modal title</Modal.Title>
+              <Modal.Title>Add Donation Inventory</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <div className="d-flex">Blood type &nbsp;</div>
+              <Form>
+                {/* Donation Type Selection */}
+                <Form.Group controlId="donationType">
+                  <Form.Label>Donation Type</Form.Label>
+                  <Form.Control
+                    as="select"
+                    value={donationType}
+                    onChange={(e) => setDonationType(e.target.value)}
+                  >
+                    <option value="blood">Blood</option>
+                    <option value="organ">Organ</option>
+                  </Form.Control>
+                </Form.Group>
+
+                {/* Blood Donation Fields */}
+                {donationType === "blood" && (
+                  <Form.Group controlId="bloodType" className="mt-3">
+                    <Form.Label>Blood Type</Form.Label>
+                    <Form.Control as="select">
+                      <option>A+</option>
+                      <option>A-</option>
+                      <option>B+</option>
+                      <option>B-</option>
+                      <option>O+</option>
+                      <option>O-</option>
+                      <option>AB+</option>
+                      <option>AB-</option>
+                    </Form.Control>
+                  </Form.Group>
+                )}
+
+                {/* Organ Donation Fields */}
+                {donationType === "organ" && (
+                  <Form.Group controlId="organType" className="mt-3">
+                    <Form.Label>Select Organ</Form.Label>
+                    <Form.Control as="select">
+                      {/* Deceased Donation Section */}
+                      <optgroup label="Organs That Can Be Donated After Death">
+                        <option>Heart</option>
+                        <option>Lungs (Both or Single)</option>
+                        <option>
+                          Liver (Can be split and donated to two recipients)
+                        </option>
+                        <option>Kidneys (Both can be donated)</option>
+                        <option>
+                          Pancreas (Can be donated fully or partially)
+                        </option>
+                        <option>Intestines</option>
+                      </optgroup>
+
+                      {/* Living Donation Section */}
+                      <optgroup label="Organs That Can Be Donated While Alive">
+                        <option>
+                          One Kidney (A person can live with one kidney)
+                        </option>
+                        <option>
+                          Part of the Liver (It regenerates in both the donor
+                          and recipient)
+                        </option>
+                        <option>
+                          One Lung or a Lobe of a Lung (Rare, but possible)
+                        </option>
+                        <option>
+                          Part of the Pancreas (A section can be donated)
+                        </option>
+                        <option>
+                          Part of the Intestine (Rare, but possible)
+                        </option>
+                      </optgroup>
+                    </Form.Control>
+                  </Form.Group>
+                )}
+
+                {/* Quantity Input */}
+                <Form.Group controlId="quantity" className="mt-3">
+                  <Form.Label>Quantity</Form.Label>
+                  <Form.Control
+                    type="number"
+                    placeholder={
+                      donationType === "blood"
+                        ? "Enter quantity (in pints)"
+                        : "Enter number of organs"
+                    }
+                    min="1"
+                  />
+                </Form.Group>
+              </Form>
             </Modal.Body>
             <Modal.Footer>
-              <Button variant="secondary" onClick={handleClose}>
+              <Button variant="secondary" onClick={toggleModal}>
                 Close
               </Button>
-              <Button variant="primary">Understood</Button>
+              <Button variant="primary">Submit</Button>
             </Modal.Footer>
           </Modal>
         </>
