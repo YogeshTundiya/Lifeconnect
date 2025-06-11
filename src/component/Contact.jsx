@@ -75,35 +75,20 @@ function Contact() {
                       {/* Deceased Donation Section */}
                       <optgroup label="Organs That Can Be Donated After Death">
                         <option>Heart</option>
-                        <option>Lungs (Both or Single)</option>
-                        <option>
-                          Liver (Can be split and donated to two recipients)
-                        </option>
-                        <option>Kidneys (Both can be donated)</option>
-                        <option>
-                          Pancreas (Can be donated fully or partially)
-                        </option>
+                        <option>Lungs</option>
+                        <option>Liver</option>
+                        <option>Kidneys</option>
+                        <option>Pancreas</option>
                         <option>Intestines</option>
                       </optgroup>
 
                       {/* Living Donation Section */}
                       <optgroup label="Organs That Can Be Donated While Alive">
-                        <option>
-                          One Kidney (A person can live with one kidney)
-                        </option>
-                        <option>
-                          Part of the Liver (It regenerates in both the donor
-                          and recipient)
-                        </option>
-                        <option>
-                          One Lung or a Lobe of a Lung (Rare, but possible)
-                        </option>
-                        <option>
-                          Part of the Pancreas (A section can be donated)
-                        </option>
-                        <option>
-                          Part of the Intestine (Rare, but possible)
-                        </option>
+                        <option>One Kidney</option>
+                        <option>Part of the Liver</option>
+                        <option>One Lung or a Lobe of a Lung</option>
+                        <option>Part of the Pancreas</option>
+                        <option>Part of the Intestine</option>
                       </optgroup>
                     </Form.Control>
                   </Form.Group>
